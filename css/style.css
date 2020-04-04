@@ -23,6 +23,7 @@ body {
 
 .form {
   background: white;
+  /* overflow-y: auto; */
   max-width: 24rem;
   border: 0 solid #e2e8f0;
   border-top-left-radius: 1.25rem;
