@@ -1,0 +1,66 @@
+/* Stylesheet */
+
+main {
+  padding: 3rem 3rem;
+  overflow: auto;
+  align-items: center;
+  background-color: #062863;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  max-height: 20rem;
+  border-radius: 2rem;
+}
+
+.img {
+  padding: 0 !important;
+}
+
+.half-page {
+  width: 100%;
+}
+
+.bg-grey {
+  background-color: grey;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.info-div>h3 {
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.info {
+  margin: 1rem 0;
+}
+
+.info>div {
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.info-div {
+  width: 35%;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+p>span {
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+.info-div>p {
+  color: bisque;
+  padding-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
