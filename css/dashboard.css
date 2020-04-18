@@ -37,6 +37,7 @@ img {
   font-weight: 900;
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
+  color: blanchedalmond;
 }
 
 .info {
@@ -63,4 +64,8 @@ p>span {
   color: bisque;
   padding-bottom: 0.5rem;
   font-size: 1.05rem;
+}
+
+.contact-me {
+  font-size: 3.5rem;
 }
