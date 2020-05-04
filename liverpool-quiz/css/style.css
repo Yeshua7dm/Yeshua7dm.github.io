@@ -2,7 +2,6 @@
 
 :root {
   font-size: 10px;
-  background-color: #6e0c0b;
   color: white;
 }
 
@@ -155,7 +154,7 @@
 @media (min-width: 1200px) {
   .responsive {
     background-color: #6e0c0b;
-    padding: 2rem;
+    padding: 0 2rem;
     font-size: 2rem;
   }
 }
