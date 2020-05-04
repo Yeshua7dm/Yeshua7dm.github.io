@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="container responsive flex-center">
+    <header class="col-8 flex-center justify-center flex-col game-header">
+      <h1>Sports Quiz</h1>
+      <p>How well do you know Liverpool FC?</p>
+    </header>
+    <section>
+      <div class="col-12 flex-center flex-col">
+        <div class="col-10 flex-row space-between">
+          <div class="col-3 bordered justify-center">
+            <h1 id="questionCounter">1/5</h1>
+            <p>Question Counter</p>
+          </div>
+          <div class="col-3 bordered justify-center">
+            <h1 id="score">0</h1>
+            <p>Current Score</p>
+          </div>
+        </div>
+        <div class="col-12 flex-center flex-row">
+          <div class="col-10 bordered">
+            <h3 id="question">The Question to be Asked</h3>
+            <div>
+              <p class="option" data-number="1">Options A</p>
+            </div>
+            <div>
+              <p class="option" data-number="2">Options B</p>
+            </div>
+            <div>
+              <p class="option" data-number="3">Options C </p>
+            </div>
+            <div>
+              <p class="option" data-number="4"> Options D</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-row col-10 space-between">
+          <div id="progressBar" class="bordered col-5">
+            <div class="progress"></div>
+          </div>
+          <button class="btn" onclick="getNewQuestion()">Next Question</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+
+</html>

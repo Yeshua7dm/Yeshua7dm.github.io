@@ -1,13 +1,12 @@
 let question = document.getElementById("question");
 let options = Array.from(document.getElementsByClassName("option"));
-console.log(options);
-console.log(question.innerText);
 
 let score = 0;
 let currentQuestion = {};
 let startPlaying = false;
 let questionCounter = 0;
 let availableQuestions = [];
+let progressBar = document.getElementsByClassName("progress");
 
 const Questions = [
   {
@@ -60,13 +59,14 @@ function startGame() {
   availableQuestions = [...Questions];
   score = 0;
   questionCounter = 0;
-  console.log(availableQuestions);
   getNewQuestion();
 }
 
 function getNewQuestion() {
   // start by checking if the max questions have been reached
   if (questionCounter >= MAX_QUESTIONS) {
+    localStorage.setItem("score", score);
+    localStorage.setItem("max", MAX_QUESTIONS);
     window.location.assign("end.html");
   }
 
@@ -79,6 +79,11 @@ function getNewQuestion() {
     option.innerText = currentQuestion["choice" + number];
   });
 
+  let questionCount = document.getElementById("questionCounter");
+
+  questionCount.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
+  progressBar[0].style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
   availableQuestions.splice(questionIndex, 1);
   startPlaying = true;
 }
@@ -99,15 +104,20 @@ options.forEach((option) => {
         ".option[data-number='" + currentQuestion.answer + "']"
       );
       correction.classList.add("correct");
+    } else {
+      score++;
+      let scoreField = document.getElementById("score");
+      scoreField.innerText = score;
     }
 
     setTimeout(() => {
       selectedOption.classList.remove(classToApply);
-      correction.classList.remove("correct");
-      getNewQuestion();
-    }, 2000);
+      if (classToApply == "incorrect") {
+        correction.classList.remove("correct");
+      }
 
-    console.log(e.target);
+      getNewQuestion();
+    }, 500);
   });
 });
 

@@ -62,7 +62,7 @@
 }
 
 [class*='col-'] {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .btn {
@@ -72,7 +72,6 @@
   border: 0.1rem solid #56a5eb;
   width: 20rem;
   text-align: center;
-  margin-bottom: 1rem;
   background-color: white;
   color: black;
 }
@@ -149,6 +148,24 @@
   }
 }
 
+@media (max-width: 576px) {
+  :root {
+    font-size: 8px;
+    background-color: #6e0c0b;
+    color: white;
+  }
+  .btn {
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 0.1rem solid #56a5eb;
+    text-align: center;
+    margin-left: 1rem;
+    background-color: white;
+    color: black;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -166,7 +183,12 @@
   font-size: 4rem;
   color: beige;
   font-weight: 900;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.home-desc {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .flex-center {
@@ -185,7 +207,7 @@
 }
 
 .bordered {
-  border: .2rem solid #2e1a51;
+  border: .2rem solid white;
   height: auto;
   font-size: 2rem;
 }
@@ -197,22 +219,6 @@
 
 /* for the next arrow button */
 
-.arrow {
-  border: solid white;
-  border-width: 0 3rem 3rem 0;
-  display: inline-block;
-  padding: 3rem;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.arrow:hover {
-  cursor: pointer;
-}
-
 .correct {
   background-color: green;
   color: white;
@@ -221,4 +227,47 @@
 .incorrect {
   background-color: red;
   color: white;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center>p {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+#progressBar {
+  width: 40rem;
+  padding: 0.5rem;
+  height: 4rem;
+  margin: 0;
+}
+
+.progress {
+  background-color: green;
+  height: 100%;
+  width: 100%;
+}
+
+#question {
+  padding: 0 1rem;
+}
+
+.score {
+  border: .2rem solid white;
+  height: auto;
+  font-size: 4rem;
+  padding: 1rem;
+  margin: 1rem 0 2rem 0;
+  box-shadow: .4rem .4rem 3rem 1rem red;
+  cursor: pointer;
 }
