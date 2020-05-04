@@ -67,7 +67,7 @@
 .btn {
   padding: 1rem;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: 0.1rem solid #56a5eb;
   width: 20rem;
   text-align: center;
@@ -80,7 +80,7 @@
 }
 
 .option {
-  padding: 1.2rem;
+  padding: 1rem;
   border: 0.1rem solid #2e1a51;
   background-color: white;
   color: #2e1a51;
